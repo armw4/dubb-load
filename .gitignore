@@ -6,6 +6,6 @@ build/
 [Oo]bj/
 [Hh]elp/
 *.suo
+*.dotcover
 *.sln.cache
 _ReSharper.*/
-*.dotcover
