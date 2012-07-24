@@ -40,9 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entity.cs" />
     <Compile Include="FileAuthorizationInfo.cs" />
     <Compile Include="FileMetadata.cs" />
     <Compile Include="FileUploadInfo.cs" />
+    <Compile Include="IEntity.cs" />
     <Compile Include="IFile.cs" />
     <Compile Include="IFileAuthorizationRepository.cs" />
     <Compile Include="IFileManager.cs" />

@@ -1,8 +1,7 @@
 ﻿using System.Web.Mvc;
 using Autofac;
 using Autofac.Integration.Mvc;
-
-using FinancialPowerDemo.Core;
+using FinancialPower.Implementation;
 using FinancialPowerDemo.Web.Controllers.FileUpload;
 
 namespace FinancialPowerDemo.Configuration
@@ -11,13 +10,15 @@ namespace FinancialPowerDemo.Configuration
     {
         public static void Start()
         {
-            Container.Current.RegisterAssemblyTypes(typeof(File).Assembly).AsImplementedInterfaces();
+            var container = new ContainerBuilder();
 
-            Container.Current.RegisterControllers(typeof(FileUploadController).Assembly);
+            container.RegisterAssemblyTypes(typeof(File).Assembly).AsImplementedInterfaces();
 
-            Container.Current.RegisterModule(new AutofacWebTypesModule());
+            container.RegisterControllers(typeof(FileUploadController).Assembly);
 
-            var lifetimeScope = Container.Current.Build();
+            container.RegisterModule(new AutofacWebTypesModule());
+
+            var lifetimeScope = container.Build();
             var resolver = new AutofacDependencyResolver(lifetimeScope);
 
             DependencyResolver.SetResolver(resolver);

@@ -40,6 +40,15 @@
     <Reference Include="Autofac.Integration.Mvc">
       <HintPath>..\packages\Autofac.Mvc3.2.6.3.862\lib\NET40\Autofac.Integration.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\packages\FluentNHibernate.1.3.0.733\lib\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.3.3.1.4000\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -50,21 +59,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoMappings.cs" />
+    <Compile Include="BaseModule.cs" />
     <Compile Include="BootStrap.cs" />
-    <Compile Include="Container.cs" />
+    <Compile Include="DubbLoadConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FinancialPower.Implementation\FinancialPower.Implementation.csproj">
+      <Project>{3B730A1D-430E-4036-8AA8-289BE5AFE3A6}</Project>
+      <Name>FinancialPower.Implementation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FinancialPowerDemo.Abstractions\FinancialPowerDemo.Abstractions.csproj">
       <Project>{6B5DF9BC-523A-483F-9E7B-DC08D4973CE4}</Project>
       <Name>FinancialPowerDemo.Abstractions</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FinancialPowerDemo.Core\FinancialPowerDemo.Core.csproj">
-      <Project>{BDEDC851-BD94-43EB-BD14-E4E4C69E99F9}</Project>
-      <Name>FinancialPowerDemo.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\FinancialPowerDemo.Web\FinancialPowerDemo.Web.csproj">
       <Project>{6C4EC87A-A5AE-4D91-A6F8-6EA314409E58}</Project>
