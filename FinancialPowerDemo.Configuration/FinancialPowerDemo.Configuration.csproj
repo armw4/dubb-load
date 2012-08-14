@@ -85,11 +85,11 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Migrations\1-Create-Database-DubbLoad.sql" />
-    <Content Include="Migrations\2-Create-Schema-FileAuthorization.sql" />
-    <Content Include="Migrations\3-Create-Table-FileAuthorization.Group.sql" />
-    <Content Include="Migrations\4-Create-Table-FileAuthorization.Topic.sql" />
-    <Content Include="Migrations\5-Create-Table-FileAuthorization.Descriminator.sql" />
+    <Content Include="Migrations\Up\1-Create-Database-DubbLoad.sql" />
+    <Content Include="Migrations\Up\2-Create-Schema-FileAuthorization.sql" />
+    <Content Include="Migrations\Up\3-Create-Table-FileAuthorization.Group.sql" />
+    <Content Include="Migrations\Up\4-Create-Table-FileAuthorization.Topic.sql" />
+    <Content Include="Migrations\Up\5-Create-Table-FileAuthorization.Descriminator.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
